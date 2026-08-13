@@ -1,11 +1,14 @@
-import Main from "./components/Main";
-import Navbar from "./components/Navbar";
+import Header from "./Components/Header"
+import Entry from "./Components/Entry"
 
 export default function App() {
     return (
         <>
-            <Navbar />
-            <Main />
+            <Header />
+
+            <main className="container">
+                <Entry />
+            </main>
         </>
-    );
+    )
 }
