@@ -32,6 +32,11 @@ header > h1 {
     font-weight: 500;
 }
 
+a {
+    display: block;
+    margin-bottom: 10px;
+}
+
 /* Journal entry */
 article.journal-entry {
     display: flex;

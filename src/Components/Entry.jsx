@@ -1,15 +1,22 @@
 import dejenLogo from "../assets/dejen.jpg";
 import mapLogo from "../assets/map.png";
 
-export default function Entry() {
+export default function Entry({img,
+    marker,
+    country,
+    googleMapLinks,
+    youtubeLink,
+    title,
+    date,
+    text}) {
     return (
         <article className="journal-entry">
 
             <div className="main-image-container">
                 <img
                     className="main-image"
-                    src={dejenLogo}
-                    alt="Ras Dejen Mount"
+                    src={img.src}
+                    alt={img.alt}
                 />
             </div>
 
@@ -18,32 +25,33 @@ export default function Entry() {
                 <div>
                     <img
                         className="marker"
-                        src={mapLogo}
-                        alt="map marker icon"
+                        src={marker.src}
+                        alt={marker.alt}
                     />
 
                     <span className="country">
-                        Ethiopia
+                        {country}
                     </span>
 
-                    <a href="https://maps.app.goo.gl/kRox4YgpTnkE65uz8">
+                    <a href={googleMapLinks}>
                         View on Google Maps
+                    </a>
+                    <a href={youtubeLink}>
+                        View on Youtube for more
                     </a>
                 </div>
 
                 <h2 className="entry-title">
-                    ራስ ዳሽን ተራራ
-                </h2>
+                    {title}</h2>
 
                 <p className="entry-date">
-                    12 Jan, 2021 - 24 Jan, 2021
+                    {date}
+                    
                 </p>
 
                 <p className="entry-text">
-                    Ras Dejen (also spelled Ras Dashen) is the highest
-                    mountain in Ethiopia. It stands at 4,550 meters
-                    (14,930 feet) above sea level in the Simien Mountains
-                    National Park within the Amhara Region.
+                    {text}
+                    
                 </p>
 
             </div>
